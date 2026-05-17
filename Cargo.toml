@@ -1,0 +1,20 @@
+[package]
+name = "find-xrp-addr"
+version = "0.0.1"
+edition = "2021"
+authors = ["Converted from Go by Grok"]
+description = "XRP Ledger vanity address finder - searches for custom rAddresses using multiple cores"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive", "env"] }
+ripple-keypairs = "0.1"
+regex = "1.10"
+ctrlc = "3.4"
+terminal_size = "0.3"
+serde_json = "1.0"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
