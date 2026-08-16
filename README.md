@@ -41,28 +41,28 @@ Or directly:
 
 **Common examples**:
 
-- Search containing "test": ./bin/find-xrp-addr --find test
-- Begins with "abc" after r: ./bin/find-xrp-addr --begins abc
-- Ends with "xyz": ./bin/find-xrp-addr --ends xyz
-- Combined + save to 1Password: ./bin/find-xrp-addr --begins abc --find test --1p --vault XRPL
-- Limit cores: --cores 4
+- Search containing "test": `./bin/find-xrp-addr --find test`
+- Begins with "abc" after r: `./bin/find-xrp-addr --begins abc`
+- Ends with "xyz": `./bin/find-xrp-addr --ends xyz`
+- Combined + save to 1Password: `./bin/find-xrp-addr --begins abc --find test --1p --vault XRPL`
+- Limit cores: `--cores 4` (**recommended**)
 
-Use make run ARGS="..." for convenience.
+Use `make run ARGS="..."` for convenience.
 
 ### Makefile Targets
 
-- make build - compile release binary to bin/find-xrp-addr
-- make run - build + run (pass args via ARGS="...")
-- make test - run unit tests (proves helper functions)
-- make clean - clean cargo + remove bin/
+- `make build` - compile release binary to `bin/find-xrp-addr`
+- `make run` - build + run (pass args via `ARGS="..."`)
+- `make test` - run unit tests (proves helper functions)
+- `make clean` - clean `cargo` + remove `bin/`
 
 ## Using the App
 
 The app generates random keypairs (using the ripple-keypairs crate) and derives classic r addresses until a match is found.
 
 When a match is found:
-- Without --1p: Prints to STDOUT with the address and family seed.
-- With --1p (and op available): Creates a Crypto Wallet item in the specified vault with address and concealed seed fields.
+- Without `--1p`: Prints to STDOUT with the address and family seed.
+- With `--1p` (and op available): Creates a Crypto Wallet item in the specified vault with address and concealed seed fields.
 
 **Important**: Family seeds are extremely sensitive. Protect them. When using --1p they are stored as concealed fields.
 
@@ -70,7 +70,7 @@ When a match is found:
 
 1. **1Password (op CLI)**:
 
-   If --1p / -1p is used but op is not installed or not in PATH, the app prints:
+   If `--1p` / `-1p` is used but op is not installed or not in `PATH`, the app prints:
 
        1password is not installed on the system - skipping -1p flag
 
@@ -80,7 +80,7 @@ When a match is found:
 
 2. **Search Time**:
 
-   Vanity searches can take a very long time (seconds to days) depending on pattern length and rarity.
+   Vanity searches can take a very long time (seconds to days to decades) depending on pattern length and rarity.
    Short patterns or common letters finish faster. Long/complex patterns may never finish in reasonable time.
    Use specific but realistic patterns.
 
@@ -119,4 +119,26 @@ When a match is found:
 
 ## License
 
-Without written permission by Andrei Merlescu, the repository owner, you cannot use this software for any commercial purposes and nor can you use this source code in any commercial software, including GPL-3 or AGPL-3 (or similar) kind of copyright. 
+&copy; 2025 ANDREI MERLESCU. ALL RIGHTS RESERVED.
+
+ONLY EDUCATIONAL USE. NO PERSONAL USE. NO COMMERCIAL USE.
+
+EDUCATIONAL USE IS GRANTED TO YOU TO READ THE SOURCE CODE OF THIS PROJECT.
+
+EDUCATIONAL USE DOES NOT GRANT YOU PERMISSION TO RUN THIS PROJECT.
+
+BY RUNNING THIS PROJECT YOUR INTENT IS TO EITHER BECOME A PERSONAL OR COMMERCIAL USE GRANTEE BY COMPLYING WITH THIS LICENSE AGREEMENT.
+
+PERSONAL USE IS GRANTED AUTOMATICALLY VIA XRP LEDGER TRANSACTION BY SENDING `rAndreiZALdtqW9PLEdxThYNPkqcJ51X1` **5 XRP** FROM THE WALLET GENERATED AFTER YOU ACTIVATE IT!
+
+COMMERCIAL USE IS GRANTED AUTOMATICALLY VIA XRP LEDGER TRANSACTION BY SENDING `rAndreiZALdtqW9PLEdxThYNPkqcJ51X1` **500 XRP** FROM THE WALLET GENERATED AFTER YOU ACTIVATE IT!
+
+VIOLATIONS OF THIS LICENSE AGREEMENT MAY RESULT IN CRIMINAL PROSECUTION.
+
+BY USING THIS SOFTWARE YOU ABSOLVE ANDREI MERLESCU FROM ALL LIABILITY AND DAMAGES.
+
+BY USING THIS SOFTWARE YOU AGREE TO NOT USE IT FOR CRIMINAL PURPOSES.
+
+THE MILITARIES OF THE WORLD ARE WATCHING YOU WHEN YOU RUN THIS SOFTWARE.
+
+BE ON YOUR BEST BEHAVIOR KNOWING THAT YOU'RE BEING WATCHED BY THEM.
