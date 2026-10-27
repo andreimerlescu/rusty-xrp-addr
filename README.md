@@ -2,6 +2,8 @@
 
 High-performance XRP Ledger vanity address finder written in Rust.
 
+![Unique](https://counthis.app/github?repository=andreimerlescu/rusty-xrp-addr&label=Unique) ![Visitors](https://counthis.app/g/qyjy5vwjtjgbjfzy)
+
 Searches for custom r... addresses matching a substring (--find), prefix (--begins), suffix (--ends), or any combination, using all available CPU cores.
 
 ## Features
